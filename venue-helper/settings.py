@@ -1,21 +1,23 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @File    : settings.py
-
-counts = 5 # 预约总轮次
-# courses=[{"CGDM":"001","CDWID":"6fbd613382ef48db9d2a2d214e47bae3","XMDM":"001","XQWID":"1","KYYSJD":"20:00-21:00","YYRQ":"2025-04-29","YYLX":"1.0"}]  # 预约场次列表
-# courses=[{"CGDM":"001","XMDM":"001","XQWID":"1","KYYSJD":"20:00-21:00","YYRQ":"2025-05-01","YYLX":"1.0"}]  # 预约场次列表
-courses=[{"CGDM":"008","XMDM":"002","XQWID":"1","KYYSJD":"20:00-21:00","YYRQ":"2025-04-30","YYLX":"2.0"}]  # 预约场次列表
-delay = 1000  # 延迟时间, 单位毫秒
 '''
     CGDM: 场馆代码
-    CDWID: 场地唯一标识
     XMDM: 项目代码
-    XQWID: 校区唯一标识
-    KYYSJD: 可预约时间段
+    XQWID: 校区唯一标识 (1粤海, 2丽湖)
+    KYYSJD: 可预约时间段 (形如20:00-21:00)
     YYRQ: 预约日期 例如 2025-01-01
     YYLX: 预约类型 即订场方式(1.0: 包场, 2.0: 散场 )
 '''
+# courses=[{"CGDM":"001","CDWID":"6fbd613382ef48db9d2a2d214e47bae3","XMDM":"001","XQWID":"1","KYYSJD":"20:00-21:00","YYRQ":"2025-04-29","YYLX":"1.0"}]  # 预约场次列表
+counts = 10 # 预约总轮次
+courses=[{"CGDM":"008","XMDM":"002","XQWID":"1","KYYSJD":"20:00-21:00","YYRQ":"2025-04-30","YYLX":"2.0"}]  # 预约场次列表
+delay = 200  # 延迟时间, 单位毫秒
+stuid = 2025101011
+stuname = "张xx"
+cookies = 'EMAP_LANG=zh; _WEU=172ad976'
+
+
 
 if isinstance(cookies, str):
     cookie_list = cookies.split(';')
